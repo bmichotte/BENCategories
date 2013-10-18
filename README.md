@@ -6,8 +6,8 @@ Some of my Objective-C categories
 
 Test if the date is earlier than the other date  
 ```objc
- (BOOL)ben_isEarlier:(NSDate *)date;
- ```
+- (BOOL)ben_isEarlier:(NSDate *)date;
+```
 
 
 Test if the date is later than the other date  
