@@ -91,4 +91,19 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     XCTAssertFalse([@"hello" ben_isLike:@"[0-9]$"]);
 }
 
+- (void)testShouldMd5String
+{
+    XCTAssertEqualObjects([@"hello" ben_md5], @"5d41402abc4b2a76b9719d911017c592");
+}
+
+- (void)testShouldSha1String
+{
+    XCTAssertEqualObjects([@"hello" ben_sha1], @"aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d");
+}
+
+- (void)testShouldSha256String
+{
+    XCTAssertEqualObjects([@"hello" ben_sha256], @"2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824");
+}
+
 @end

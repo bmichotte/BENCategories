@@ -23,9 +23,11 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
 #import "NSString+BENCategory.h"
+#import <CommonCrypto/CommonDigest.h>
 
 @implementation NSString (BENCategory)
 
+#pragma mark - String search
 - (NSRange)ben_testRegex:(NSString *)regex
 {
     NSError *error = nil;
@@ -57,6 +59,52 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 {
     NSRange range = [self ben_testRegex:regex];
     return !NSEqualRanges(range, NSMakeRange(NSNotFound, 0));
+}
+
+#pragma mark - Crypto
+- (NSString *)ben_md5
+{
+    const char *value = [self UTF8String];
+
+    unsigned char outputBuffer[CC_MD5_DIGEST_LENGTH];
+    CC_MD5(value, strlen(value), outputBuffer);
+
+    NSMutableString *outputString = [[NSMutableString alloc] initWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
+    for (NSInteger count = 0; count < CC_MD5_DIGEST_LENGTH; count++)
+    {
+        [outputString appendFormat:@"%02x", outputBuffer[count]];
+    }
+    return outputString;
+}
+
+- (NSString *)ben_sha1
+{
+    NSData *data = [self dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    uint8_t digest[CC_SHA1_DIGEST_LENGTH];
+    CC_SHA1(data.bytes, data.length, digest);
+    NSMutableString* output = [NSMutableString stringWithCapacity:CC_SHA1_DIGEST_LENGTH * 2];
+
+    for(int i = 0; i < CC_SHA1_DIGEST_LENGTH; i++)
+    {
+        [output appendFormat:@"%02x", digest[i]];
+    }
+
+    return output;
+}
+
+- (NSString *)ben_sha256
+{
+    const char *s = [self cStringUsingEncoding:NSASCIIStringEncoding];
+    NSData *keyData = [NSData dataWithBytes:s length:strlen(s)];
+
+    uint8_t digest[CC_SHA256_DIGEST_LENGTH] = {0};
+    CC_SHA256(keyData.bytes, keyData.length, digest);
+    NSData *out = [NSData dataWithBytes:digest length:CC_SHA256_DIGEST_LENGTH];
+    NSString *hash = [out description];
+    hash = [hash stringByReplacingOccurrencesOfString:@" " withString:@""];
+    hash = [hash stringByReplacingOccurrencesOfString:@"<" withString:@""];
+    hash = [hash stringByReplacingOccurrencesOfString:@">" withString:@""];
+    return hash;
 }
 
 @end

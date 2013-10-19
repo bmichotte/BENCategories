@@ -26,6 +26,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 @interface NSString (BENCategory)
 
+#pragma mark - String search
 /**
  Test if a string starts with a string or a regular expression
 
@@ -46,5 +47,21 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  @param regex the string or the regular expression to test.
  */
 - (BOOL)ben_isLike:(NSString *)regex;
+
+#pragma mark - Crypto
+/**
+ Get the md5 of a string
+ */
+- (NSString *)ben_md5;
+
+/**
+ Get the sha1 of a string
+ */
+- (NSString *)ben_sha1;
+
+/**
+ Get the sha256 of a string
+ */
+- (NSString *)ben_sha256;
 
 @end
