@@ -22,6 +22,8 @@
 		43C528B01811B81D00D59773 /* TestNSStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C528AF1811B81D00D59773 /* TestNSStringCategory.m */; };
 		43C528B31811C08F00D59773 /* NSDate+BENCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C528B21811C08F00D59773 /* NSDate+BENCategory.m */; };
 		64C111747236D43A9E681ABB /* TestNSDateCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C1163CA770A804C4C212A6 /* TestNSDateCategory.m */; };
+		64C115C03873C67A8EB8BC7A /* TestUIColorCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C1146BD9FCBD419E3AE71A /* TestUIColorCategory.m */; };
+		64C11B27AC387AA36F39D421 /* UIColor+BENCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C1183A5BF8BD964504753D /* UIColor+BENCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +57,10 @@
 		43C528AF1811B81D00D59773 /* TestNSStringCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNSStringCategory.m; sourceTree = "<group>"; };
 		43C528B11811C08F00D59773 /* NSDate+BENCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+BENCategory.h"; sourceTree = "<group>"; };
 		43C528B21811C08F00D59773 /* NSDate+BENCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+BENCategory.m"; sourceTree = "<group>"; };
+		64C1144411C1A13FEE7DB800 /* UIColor+BENCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BENCategory.h"; sourceTree = "<group>"; };
+		64C1146BD9FCBD419E3AE71A /* TestUIColorCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUIColorCategory.m; sourceTree = "<group>"; };
 		64C1163CA770A804C4C212A6 /* TestNSDateCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNSDateCategory.m; sourceTree = "<group>"; };
+		64C1183A5BF8BD964504753D /* UIColor+BENCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BENCategory.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +146,7 @@
 				43C528AF1811B81D00D59773 /* TestNSStringCategory.m */,
 				43C5289C1811B7D100D59773 /* Supporting Files */,
 				64C1163CA770A804C4C212A6 /* TestNSDateCategory.m */,
+				64C1146BD9FCBD419E3AE71A /* TestUIColorCategory.m */,
 			);
 			path = BENCategoriesTests;
 			sourceTree = "<group>";
@@ -161,6 +167,8 @@
 				43C528AD1811B7FF00D59773 /* NSString+BENCategory.m */,
 				43C528B11811C08F00D59773 /* NSDate+BENCategory.h */,
 				43C528B21811C08F00D59773 /* NSDate+BENCategory.m */,
+				64C1144411C1A13FEE7DB800 /* UIColor+BENCategory.h */,
+				64C1183A5BF8BD964504753D /* UIColor+BENCategory.m */,
 			);
 			path = BENCategories;
 			sourceTree = "<group>";
@@ -265,6 +273,7 @@
 				43C5288D1811B7D100D59773 /* BENAppDelegate.m in Sources */,
 				43C528891811B7D100D59773 /* main.m in Sources */,
 				43C528AE1811B7FF00D59773 /* NSString+BENCategory.m in Sources */,
+				64C11B27AC387AA36F39D421 /* UIColor+BENCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +283,7 @@
 			files = (
 				43C528B01811B81D00D59773 /* TestNSStringCategory.m in Sources */,
 				64C111747236D43A9E681ABB /* TestNSDateCategory.m in Sources */,
+				64C115C03873C67A8EB8BC7A /* TestUIColorCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
