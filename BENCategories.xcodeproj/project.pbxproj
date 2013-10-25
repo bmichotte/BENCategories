@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		434FFBE5181A7545007BB3FE /* UIView+BENCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 434FFBE4181A7545007BB3FE /* UIView+BENCategory.m */; };
+		434FFBE8181A754C007BB3FE /* UIDevice+BENCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 434FFBE7181A754C007BB3FE /* UIDevice+BENCategory.m */; };
 		43C5287D1811B7D100D59773 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C5287C1811B7D100D59773 /* Foundation.framework */; };
 		43C5287F1811B7D100D59773 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C5287E1811B7D100D59773 /* CoreGraphics.framework */; };
 		43C528811811B7D100D59773 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C528801811B7D100D59773 /* UIKit.framework */; };
@@ -37,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		434FFBE3181A7545007BB3FE /* UIView+BENCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BENCategory.h"; sourceTree = "<group>"; };
+		434FFBE4181A7545007BB3FE /* UIView+BENCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BENCategory.m"; sourceTree = "<group>"; };
+		434FFBE6181A754C007BB3FE /* UIDevice+BENCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+BENCategory.h"; sourceTree = "<group>"; };
+		434FFBE7181A754C007BB3FE /* UIDevice+BENCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+BENCategory.m"; sourceTree = "<group>"; };
 		43C528791811B7D100D59773 /* BENCategories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BENCategories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C5287C1811B7D100D59773 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		43C5287E1811B7D100D59773 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -163,6 +169,10 @@
 		43C528AB1811B7FF00D59773 /* BENCategories */ = {
 			isa = PBXGroup;
 			children = (
+				434FFBE6181A754C007BB3FE /* UIDevice+BENCategory.h */,
+				434FFBE7181A754C007BB3FE /* UIDevice+BENCategory.m */,
+				434FFBE3181A7545007BB3FE /* UIView+BENCategory.h */,
+				434FFBE4181A7545007BB3FE /* UIView+BENCategory.m */,
 				43C528AC1811B7FF00D59773 /* NSString+BENCategory.h */,
 				43C528AD1811B7FF00D59773 /* NSString+BENCategory.m */,
 				43C528B11811C08F00D59773 /* NSDate+BENCategory.h */,
@@ -222,7 +232,7 @@
 				ORGANIZATIONNAME = "Benjamin Michotte";
 				TargetAttributes = {
 					43C528931811B7D100D59773 = {
-						TestTargetID = 43C528781811B7D100D59773 /* BENCategories */;
+						TestTargetID = 43C528781811B7D100D59773;
 					};
 				};
 			};
@@ -269,6 +279,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				434FFBE5181A7545007BB3FE /* UIView+BENCategory.m in Sources */,
+				434FFBE8181A754C007BB3FE /* UIDevice+BENCategory.m in Sources */,
 				43C528B31811C08F00D59773 /* NSDate+BENCategory.m in Sources */,
 				43C5288D1811B7D100D59773 /* BENAppDelegate.m in Sources */,
 				43C528891811B7D100D59773 /* main.m in Sources */,
