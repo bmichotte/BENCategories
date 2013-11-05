@@ -31,41 +31,41 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
  @return YES if it is an iPad
  */
-+ (BOOL)isPad;
++ (BOOL)ben_isPad;
 
 /**
  Check if the device is an iPhone or iPod
 
  @return YES if it is an iPhone or iPod
  */
-+ (BOOL)isPhone;
++ (BOOL)ben_isPhone;
 
 /**
  Check if the device is an iPhone 5
 
  @return YES if it is an iPhone 5
  */
-+ (BOOL)isPhone5;
++ (BOOL)ben_isPhone5;
 
 /**
  Check if the device is a Retina model
 
  @return YES if it is a Retina model
  */
-+ (BOOL)isRetina;
++ (BOOL)ben_isRetina;
 
 /**
  Check if the device is in portrait mode
 
  @return YES if it is in portrait mode
  */
-+ (BOOL)isPortrait;
++ (BOOL)ben_isPortrait;
 
 /**
  Check if the device is in landscape mode
 
  @return YES if it is in landscape mode
  */
-+ (BOOL)isLandscape;
++ (BOOL)ben_isLandscape;
 
 @end

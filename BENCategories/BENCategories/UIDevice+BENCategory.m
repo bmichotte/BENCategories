@@ -26,19 +26,19 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 @implementation UIDevice (BENCategory)
 
-+ (BOOL)isPad
++ (BOOL)ben_isPad
 {
     return UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad;
 }
 
-+ (BOOL)isPhone
++ (BOOL)ben_isPhone
 {
     return UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone;
 }
 
-+ (BOOL)isPhone5
++ (BOOL)ben_isPhone5
 {
-    if (![[self class] isPhone])
+    if (![[self class] ben_isPhone])
     {
         return NO;
     }
@@ -57,18 +57,18 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     return NO;
 }
 
-+ (BOOL)isRetina
++ (BOOL)ben_isRetina
 {
     return [[UIScreen mainScreen] scale] > 1.0;
 }
 
-+ (BOOL)isPortrait
++ (BOOL)ben_isPortrait
 {
     UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
     return UIInterfaceOrientationIsPortrait(orientation);
 }
 
-+ (BOOL)isLandscape
++ (BOOL)ben_isLandscape
 {
     UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
     return UIInterfaceOrientationIsLandscape(orientation);
