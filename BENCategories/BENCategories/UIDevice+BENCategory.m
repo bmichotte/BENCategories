@@ -74,4 +74,19 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     return UIInterfaceOrientationIsLandscape(orientation);
 }
 
++ (BOOL)ben_isVersionGreaterThan:(NSString *)version
+{
+    return [[[UIDevice currentDevice] systemVersion] compare:version options:NSNumericSearch] == NSOrderedDescending;
+}
+
++ (BOOL)ben_isVersionLessThan:(NSString *)version
+{
+    return [[[UIDevice currentDevice] systemVersion] compare:version options:NSNumericSearch] == NSOrderedAscending;
+}
+
++ (BOOL)ben_isVersionEqualTo:(NSString *)version
+{
+    return [[[UIDevice currentDevice] systemVersion] compare:version options:NSNumericSearch] == NSOrderedSame;
+}
+
 @end

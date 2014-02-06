@@ -68,4 +68,24 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 + (BOOL)ben_isLandscape;
 
+/**
+ Check if the iOS version is greater than the version given
+
+ @return YES if it is in landscape mode
+ */
++ (BOOL)ben_isVersionGreaterThan:(NSString *)version;
+
+/**
+ Check if the iOS version is less than the version given
+
+ @return YES if it is in landscape mode
+ */
++ (BOOL)ben_isVersionLessThan:(NSString *)version;
+
+/**
+ Check if the iOS version is equal to the version given
+
+ @return YES if it is in landscape mode
+ */
++ (BOOL)ben_isVersionEqualTo:(NSString *)version;
 @end
